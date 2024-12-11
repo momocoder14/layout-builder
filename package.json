@@ -1,17 +1,23 @@
 {
   "name": "@momocoder14/layout-builder",
   "version": "1.0.5",
-  "main": "index.js",
-  "private": false,
+  "description": "A layout builder package that makes layout easier to build and manage",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "private": false,
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist && tsc",
     "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "A layout builder package that makes layout easier to build and manage",
   "dependencies": {
     "clsx": "^2.1.1"
   },

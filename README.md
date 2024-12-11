@@ -1,24 +1,27 @@
-### Responsive Layout Builder
+# Responsive Layout Builder
+
 A utility library for creating responsive container layouts in React. It allows you to easily create flexible, grid-based containers that adapt to different screen sizes with customizable breakpoints.
 
-Features
-Responsive Containers: Create grids and layouts that automatically adjust based on screen size.
-Customizable Breakpoints: Define your own breakpoints for responsive designs.
-Utility Functions: Functions for generating CSS grid styles and managing class names.
-Nested Containers: Easily create nested grid layouts.
-Flexibility: Supports customizable column counts, gaps, and styling.
-Installation
-To use this package in your React project, install it via npm:
+## Features
 
-bash
-Copy code
+- **Responsive Containers**: Create grids and layouts that automatically adjust based on screen size.
+- **Customizable Breakpoints**: Define your own breakpoints for responsive designs.
+- **Utility Functions**: Includes functions for generating CSS grid styles and managing class names.
+- **Nested Containers**: Easily create nested grid layouts.
+- **Flexibility**: Supports customizable column counts, gaps, and styling.
+
+## Installation
+
+To install this package in your React project, run the following command:
+
+```bash
 npm install responsive-container-builder
-Usage
-1. ResponsiveContainer Component
-The ResponsiveContainer component allows you to create responsive layouts with configurable columns and gaps.
+```
 
-tsx
-Copy code
+## Usage
+1. ResponsiveContainer Component: The ResponsiveContainer component allows you to create responsive layouts with configurable columns and gaps.
+
+```tsx
 import React from 'react';
 import { ResponsiveContainer } from 'responsive-container-builder';
 
@@ -34,32 +37,38 @@ const App = () => {
 };
 
 export default App;
-2. Utility Functions
+
+```
+
+2. Utility Functions:
 You can also use the utility functions for more control over your layouts.
 
-generateGridStyles
+**generateGridStyles**
+
 This function generates the necessary CSS grid styles for a given number of columns and gap.
 
-tsx
-Copy code
+```tsx
 import { generateGridStyles } from 'responsive-container-builder';
 
 const styles = generateGridStyles(3, '10px');
 console.log(styles);
 // Output: { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }
-generateResponsiveGridStyles
+```
+
+**generateResponsiveGridStyles**
+
 This function generates responsive grid styles based on custom breakpoints.
 
-tsx
-Copy code
+```tsx
 import { generateResponsiveGridStyles, DEFAULT_BREAKPOINTS } from 'responsive-container-builder';
 
 const responsiveStyles = generateResponsiveGridStyles(DEFAULT_BREAKPOINTS);
 console.log(responsiveStyles);
+```
 3. Custom Breakpoints
 You can define your own breakpoints and use them in the responsive grid generation.
 
-tsx
+```tsx
 Copy code
 import { DEFAULT_BREAKPOINTS, generateMediaQuery } from 'responsive-container-builder';
 
@@ -71,49 +80,56 @@ const customBreakpoints = {
 
 const query = generateMediaQuery(customBreakpoints.md);
 console.log(query); // Output: '@media (min-width: 900px)'
-Configuration
+```
+## Configuration
 The default breakpoints are:
 
-typescript
-Copy code
+```typescript
 export const DEFAULT_BREAKPOINTS = {
   sm: "640px",
   md: "768px",
   lg: "1024px",
   xl: "1280px",
 };
+```
+
 You can easily override these in your project by importing and modifying them as needed.
 
-Development
+## Development
 1. Setup
 Clone the repository and install dependencies:
 
-bash
-Copy code
+```bash
 git clone https://github.com/your-username/responsive-container-builder.git
 cd responsive-container-builder
 npm install
+```
+
 2. Building
 To build the package, run the following command:
 
-bash
-Copy code
+```bash
 npm run build
+```
+
 This will transpile the TypeScript code and generate the output in the dist/ folder.
 
 3. Testing
 Run tests using Jest:
 
-bash
-Copy code
+```bash
 npm run test
-Contributing
+```
+
+## Contributing
+
 We welcome contributions! To contribute:
 
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Commit your changes (git commit -am 'Add new feature').
-Push to the branch (git push origin feature/your-feature).
-Create a new Pull Request.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature/your-feature).
+3. Commit your changes (git commit -am 'Add new feature').
+4. Push to the branch (git push origin feature/your-feature).
+5. Create a new Pull Request.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details. ![License](https://img.shields.io/badge/license-MIT-green)

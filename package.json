@@ -1,15 +1,9 @@
 {
   "name": "@momocoder14/layout-builder",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A layout builder package that makes layout easier to build and manage",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
-    }
-  },
+  "types": "dist/types/index.d.ts",
   "private": false,
   "scripts": {
     "build": "rm -rf dist && tsc",

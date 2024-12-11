@@ -1,5 +1,4 @@
-// src/components/ResponsiveContainer.tsx
-import React, { CSSProperties, FC } from "react";
+import React, { CSSProperties } from "react";
 import { generateGridStyles } from "../utils/generateLayout";
 
 interface ResponsiveContainerProps {
@@ -10,13 +9,13 @@ interface ResponsiveContainerProps {
   className?: string;
 }
 
-const ResponsiveContainer: FC<ResponsiveContainerProps> = ({
+const ResponsiveContainer = ({
   children,
   columns = 3,
   gap = "1rem",
   style,
   className,
-}) => {
+}: ResponsiveContainerProps) => {
   const gridStyles = generateGridStyles(columns, gap);
 
   return (

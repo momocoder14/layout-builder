@@ -1,24 +1,24 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "incremental": true,
-    "declaration": true,
-    "declarationDir": "./dist",
-    "outDir": "./dist",
+    "target": "ES2017", // ES6 or higher is a good choice, keep it
+    "lib": ["dom", "dom.iterable", "esnext"], // Standard libraries, keep this
+    "allowJs": true, // Allow JS files, keep this if you have JS files in the project
+    "skipLibCheck": true, // Skip type checking of declaration files, keep this
+    "strict": true, // Enable strict type checking (good practice)
+    "esModuleInterop": true, // Ensures compatibility with ES modules
+    "module": "esnext", // ESNext is fine for modern projects
+    "moduleResolution": "node", // Standard module resolution
+    "resolveJsonModule": true, // Allow importing of JSON files
+    "isolatedModules": true, // Ensures each file can be transpiled independently (for tsx)
+    "jsx": "react-jsx", // JSX handling for React 17 or later
+    "incremental": true, // Enables incremental compilation, speeds up future builds
+    "declaration": true, // Enables the generation of .d.ts files
+    "declarationDir": "./dist/types", // Put .d.ts files into a separate folder (optional but cleaner)
+    "outDir": "./dist", // Place JS files in dist folder
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"] // Maps '@' to the src directory
     }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*"], // Include all files in the src directory
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and dist directories from the build
 }

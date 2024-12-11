@@ -1,0 +1,23 @@
+{
+  "name": "@momocoder14/layout-builder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": false,
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "A layout builder package that makes layout easier to build and manage",
+  "dependencies": {
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.1.0",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^19.0.1",
+    "jest": "^29.7.0",
+    "typescript": "^5.7.2"
+  }
+}

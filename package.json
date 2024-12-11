@@ -1,6 +1,6 @@
 {
   "name": "@momocoder14/layout-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "private": false,
   "scripts": {

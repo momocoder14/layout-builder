@@ -15,7 +15,7 @@ A utility library for creating responsive container layouts in React. It allows 
 To install this package in your React project, run the following command:
 
 ```bash
-npm install responsive-container-builder
+npm install @momocoder14/layout-builder
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ npm install responsive-container-builder
 
 ```tsx
 import React from 'react';
-import { ResponsiveContainer } from 'responsive-container-builder';
+import { ResponsiveContainer } from '@momocoder14/layout-builder';
 
 const App = () => {
   return (
@@ -48,7 +48,7 @@ You can also use the utility functions for more control over your layouts.
 This function generates the necessary CSS grid styles for a given number of columns and gap.
 
 ```tsx
-import { generateGridStyles } from 'responsive-container-builder';
+import { generateGridStyles } from '@momocoder14/layout-builder';
 
 const styles = generateGridStyles(3, '10px');
 console.log(styles);
@@ -60,7 +60,7 @@ console.log(styles);
 This function generates responsive grid styles based on custom breakpoints.
 
 ```tsx
-import { generateResponsiveGridStyles, DEFAULT_BREAKPOINTS } from 'responsive-container-builder';
+import { generateResponsiveGridStyles, DEFAULT_BREAKPOINTS } from '@momocoder14/layout-builder';
 
 const responsiveStyles = generateResponsiveGridStyles(DEFAULT_BREAKPOINTS);
 console.log(responsiveStyles);
@@ -70,7 +70,7 @@ You can define your own breakpoints and use them in the responsive grid generati
 
 ```tsx
 Copy code
-import { DEFAULT_BREAKPOINTS, generateMediaQuery } from 'responsive-container-builder';
+import { DEFAULT_BREAKPOINTS, generateMediaQuery } from '@momocoder14/layout-builder';
 
 const customBreakpoints = {
   sm: '600px',
@@ -100,8 +100,8 @@ You can easily override these in your project by importing and modifying them as
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/responsive-container-builder.git
-cd responsive-container-builder
+git clone https://github.com/momocoder14/layout-builder.git
+cd layout-builder
 npm install
 ```
 
